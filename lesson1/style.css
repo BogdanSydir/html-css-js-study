@@ -1,0 +1,4 @@
+html,body {scroll-behavior: smooth}
+h2 {background: aqua}
+.parents{color: rgb(255,0,0)}
+.size{width: 300px;}
