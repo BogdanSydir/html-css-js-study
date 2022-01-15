@@ -1,0 +1,110 @@
+#header{
+    background: silver;
+    width: 340px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+ #header > div {
+     margin: 10px;
+     text-align: center;
+ }
+
+.block1{
+    height: 100px;
+    width: 320px;
+    background: #FFAA00;
+}
+.block2{
+    height: 320px;
+    width: 100px;
+    background: #FF54A6;
+}
+.block3{
+    height: 150px;
+    width: 200px;
+    background: blue;
+    margin-bottom: 20px;
+}
+.block4{
+    height: 150px;
+    width: 200px;
+    background: blue;
+}
+.block5{
+    height: 100px;
+    width: 320px;
+    background: #FFAA00;
+}
+
+#header2{
+    background: silver;
+    width: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.top{
+    height: 100px;
+    width: 450px;
+    background: red;
+    margin-bottom: 10px;
+}
+.middle{
+    height: 100px;
+    display: flex;
+
+}
+.b1{
+    height: 100px;
+    width: 150px;
+    background: #FF54A6;
+}
+.b2{
+    height: 100px;
+    width: 150px;
+    background: #FFAA00;
+}
+.b3{
+    height: 100px;
+    width: 150px;
+    background: #2CFEF1;
+}
+.bottom{
+    margin-top: 10px;
+    height: 300px;
+    width: 450px;
+    background: green;
+}
+
+
+#header3{
+    background: #06bcd4;
+    padding: 20px 0;
+    width: 1300px;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    width: 500px;
+    height: 150px;
+    background: white;
+}
+.cards > div > h2{
+    color: #F4A444;
+}
+.cards > i{
+    font-size: 70px;
+    height: 100px;
+    width: 150px;
+    margin: 20px;
+}
