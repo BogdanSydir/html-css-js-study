@@ -1,0 +1,141 @@
+#background{
+    width: 530px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: black solid 2px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.A{
+    height: 100px;
+    width: 510px;
+    background: silver;
+    margin: 10px 10px 0 10px;
+}
+.BCDEF{
+    height: 200px;
+    width: 540px;
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+.BCDE{
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.B{
+    height: 95px;
+    width: 350px;
+    background: silver;
+    margin-bottom: 10px;
+}
+.C{
+    width: 110px;
+    height: 95px;
+    background: silver;
+}
+.D{
+    width: 110px;
+    height: 95px;
+    background: silver;
+    margin: 0 10px 0 10px;
+}
+.E{
+    width: 110px;
+    height: 95px;
+    background: silver;
+}
+
+.F{
+    height: 200px;
+    width: 150px;
+    background: silver;
+    margin-left: 10px;
+}
+
+
+#background2{
+    width: 530px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: black solid 2px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.block{
+    height: 95px;
+    width: 120px;
+    background: silver;
+}
+.A2 {
+    height: 100px;
+    width: 510px;
+    background: silver;
+    margin: 10px 10px 0 10px;
+}
+.BCDEFGH2 {
+    height: 200px;
+    width: 540px;
+    display: flex;
+    margin: 10px 10px 10px 10px;
+}
+.BCDEFG2 {
+    height: 200px;
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.C2{
+    margin: 0 10px 0 10px;
+}
+.E2{
+    margin-top: 10px;
+}
+.F2{
+    margin: 10px 10px 0 10px;
+;
+}
+.G2{
+    margin-top: 10px;
+}
+.H2{
+    width: 120px;
+    margin-left: 10px;
+    background: silver;
+}
+
+
+#background3{
+    width: 530px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: silver;
+}
+.top{
+    width: 250px;
+    height: 400px;
+    background: cornflowerblue;
+
+}
+.kabobs{
+    width: 530px;
+    height: 250px;
+    background: cornflowerblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.blocks_down {
+    width: 156px;
+    height: 200px;
+    background: blue;
+}
