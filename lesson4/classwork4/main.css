@@ -1,0 +1,27 @@
+.bg-silver{
+    background: #cdd7e0;
+}
+.bg-lightblue{
+    background: #06bcd4;
+}
+.bg-darkblue{
+    background: darkblue;
+}
+.w500{
+    width: 500px;
+}
+.h200{
+    height: 200px;
+}
+.bord-rad-50{
+    border-radius: 50%;
+}
+.bord-rad-10{
+    border-radius: 10%;
+}
+.bord-color{
+    border-color: #06bcd4;
+}
+.mrg_0_auto{
+    margin: 0 auto;
+}
