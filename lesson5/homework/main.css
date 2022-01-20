@@ -1,0 +1,110 @@
+.background {
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.disp-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-gap {
+    column-gap: 10px;
+}
+
+.row-gap {
+    row-gap: 10px;
+}
+
+.bord-rad-10 {
+    border-radius: 10px;
+}
+
+.bg-silver {
+    background: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 750px) {
+    .background {
+        width: 702px;
+        height: 502px;
+    }
+
+    .hA1 {
+        height: 100px;
+    }
+    .hB1 {
+        height: 370px;
+    }
+    .hC1{
+        height: 370px;
+    }
+    .hB2{
+        height: 180px;
+    }
+    .hCDE{
+        height: 180px;
+    }
+
+
+    .wA1 {
+        width: 680px;
+    }
+    .wB1 {
+        width: 400px;
+    }
+    .wC1 {
+        width: 270px;
+    }
+    .wB2{
+        width: 400px;
+    }
+    .wCDE{
+        width: 126px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+    .background {
+        width: 502px;
+        height: 702px;
+    }
+
+    .hA1{
+       height: 100px;
+    }
+    .hB1{
+        height: 460px;
+    }
+    .hC1{
+        height: 100px;
+    }
+    .hB2{
+        height: 225px;
+    }
+    .hCDE{
+        height: 225px;
+    }
+
+    .wA1{
+        width: 480px;
+    }
+    .wB1{
+        width: 480px;
+    }
+    .wC1{
+        width: 480px;
+    }
+    .wB2{
+        width: 480px;
+    }
+    .wCDE{
+        width: 153px;
+    }
+}
