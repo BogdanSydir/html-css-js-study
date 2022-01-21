@@ -1,0 +1,128 @@
+.background{
+    margin: auto;
+}
+.disp-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gap{
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.logo, .header, .nav, .store, .tools, .bath, .ad, .types, .related, .footer{
+    background: #464646;
+}
+@media screen and (min-width: 800px){
+    .background{
+        width: 600px;
+    }
+    .gap1{
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    .none{
+        display: none;
+    }
+    .logo{
+        height: 100px;
+        width: 200px;
+    }
+    .header{
+        height: 100px;
+        width: 390px;
+    }
+
+    .block2{
+        width: 200px;
+    }
+    .nav{
+        height: 400px;
+        width: 200px;
+    }
+    .store{
+        height: 100px;
+        width: 200px;
+    }
+    .tools{
+        height: 100px;
+        width: 200px;
+    }
+
+    .block3{
+        width: 390px;
+    }
+    .bath{
+        height: 200px;
+        width: 190px;
+    }
+    .ad{
+        height: 200px;
+        width: 190px;
+    }
+    .types{
+        height: 410px;
+        width: 190px;
+    }
+    .related{
+        height: 410px;
+        width: 190px;
+    }
+
+    .footer{
+        height: 100px;
+        width: 600px;
+    }
+
+}
+@media screen and (max-width: 800px){
+    .background{
+        width: 500px;
+    }
+    .gap1{
+        column-gap: 2px;
+    }
+    .none2{
+        display: none;
+    }
+    .logo{
+        height: 100px;
+        width: 99px;
+    }
+    .header{
+        height: 100px;
+        width: 399px;
+    }
+    .nav{
+        height: 100px;
+        width: 500px;
+    }
+    .bath{
+        height: 180px;
+        width: 300px;
+    }
+    .ad{
+        height: 180px;
+        width: 190px;
+    }
+    .types{
+        height: 300px;
+        width: 500px;
+    }
+    .related{
+        height: 200px;
+        width: 500px;
+    }
+    .store{
+        height: 100px;
+        width: 245px;
+    }
+    .tools{
+        height: 100px;
+        width: 245px;
+    }
+    .footer{
+        height: 150px;
+        width: 500px;
+    }
+
+}
