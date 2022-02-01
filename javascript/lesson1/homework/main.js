@@ -1,16 +1,16 @@
-var word1 = 'hello';
-var word2 = 'owu';
-var word3 = 'com';
-var word4 = 'ua';
-var num1 = 1;
-var num2 = 10;
-var num3 = -999;
-var num4 = 123;
-var num5 = 3.14;
-var num6 = 2.7;
-var num7 = 16;
-var bull1 = true;
-var bull2 = false;
+word1 = 'hello';
+word2 = 'owu';
+word3 = 'com';
+word4 = 'ua';
+num1 = 1;
+num2 = 10;
+num3 = -999;
+num4 = 123;
+num5 = 3.14;
+num6 = 2.7;
+num7 = 16;
+bull1 = true;
+bull2 = false;
 
 console.log(word1);
 console.log(word2);
@@ -26,19 +26,19 @@ alert(num7);
 document.write(bull1)
 document.write(bull2)
 
-var word1 = 'hell';
-var word2 = 'owuwu';
-var word3 = 'comm';
-var word4 = 'lol';
-var num1 = 5;
-var num2 = 15;
-var num3 = -994;
-var num4 = 128;
-var num5 = 8.14;
-var num6 = 7.7;
-var num7 = 21;
-var bull1 = false;
-var bull2 = true;
+word1 = 'hell';
+word2 = 'owuwu';
+word3 = 'comm';
+word4 = 'lol';
+num1 = 5;
+num2 = 15;
+num3 = -994;
+num4 = 128;
+num5 = 8.14;
+num6 = 7.7;
+num7 = 21;
+bull1 = false;
+bull2 = true;
 
 console.log(word1);
 console.log(word2);
@@ -58,7 +58,7 @@ let firstName = 'Богдан '
 let middleName = 'Сидір '
 let lastName = 'Ярославович'
 
-let person = [firstName, middleName, lastName]
+let person = firstName + middleName + lastName;
 
 console.log(person)
 
@@ -66,7 +66,9 @@ let first = prompt('імя');
 let second = prompt('прізвище');
 let age = prompt('вік');
 
-document.write('Вітаю ', first, second, '. Тобі ', age, ' років.');
+let info = 'Вітаю, ' + first + ' ' + second + ', тобі ' + age + ' років.'
+
+document.write(info);
 
 
 
