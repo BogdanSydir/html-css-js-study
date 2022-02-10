@@ -73,17 +73,17 @@ ulCreator2(5, 'asd')
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-// let array3 = [1, 2, 3, true, false, 'asd', 'qwe']
-//
-// function arrCreator2(arr) {
-//     document.write(`<ol>`)
-//     for (let arrElement of arr) {
-//         document.write(`<li>${arrElement}</li>`)
-//     }
-//     document.write(`</ol>`)
-// }
-//
-// arrCreator2(array3)
+let array3 = [1, 2, 3, true, false, 'asd', 'qwe']
+
+function arrCreator2(arr) {
+    document.write(`<ol>`)
+    for (let arrElement of arr) {
+        document.write(`<li>${arrElement}</li>`)
+    }
+    document.write(`</ol>`)
+}
+
+arrCreator2(array3)
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
