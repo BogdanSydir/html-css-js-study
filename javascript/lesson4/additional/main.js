@@ -14,7 +14,6 @@ one(10)
 spaceBetween()
 
 
-
 // - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //     EXAMPLE:
 // [1,2,3,4]
@@ -36,8 +35,8 @@ document.write(summator(array1, array2))
 spaceBetween()
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
-//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-let arrayObjects = [{name: 'Dima', age: 13}, {model: 'Camry'}]
+//     [{name: 'Dima', age: 14}, {model: 'Camry'}]  ===> [ name, age, model ]
+let arrayObjects = [{name: 'Dima', age: 14}, {model: 'Camry'}]
 
 function arrayOfObjectsCreator (arr){
     let keys =[]
