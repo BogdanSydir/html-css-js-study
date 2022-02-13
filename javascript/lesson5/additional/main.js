@@ -54,9 +54,9 @@ spaceBetween()
 // EXAMPLE:
 let nums = [1, 0, 3, 4, 5, 6, 0, 8, 2, 4, 0, 6, 1, 2, 0, 5, 2, 0, 0, 0, 5]
 let sort = (arr) => {
-    for (i = 0; i < arr.length; i++) {
+    for (i = 0; i < arr.length - 1; i++) {
         for (j = i; j < arr.length; j++) {
-            if (arr[j] === 0 && arr[j + 1] !== undefined) {
+            if (arr[j] === 0 && arr[j + 1]) {
                 arr[j] = arr[j + 1]
                 arr[j + 1] = 0
             }
