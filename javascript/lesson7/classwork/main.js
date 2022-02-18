@@ -15,9 +15,9 @@ function CarCreator(model, developer, year, maxSpeed, engineVolume) {
         console.log(`їдемо ${this.maxSpeed} на годину`);
     }
     this.info = function () {
-        for (const Key in this) {
-            if (typeof this[Key] !== 'function') {
-                console.log(`${Key} - ${this[Key]}`)
+        for (const key in this) {
+            if (typeof this[key] !== 'function') {
+                console.log(`${key} - ${this[key]}`)
             }
         }
     }
@@ -57,41 +57,49 @@ class CarCreator2 {
         this.year = year;
         this.maxSpeed = maxSpeed;
         this.engineVolume = engineVolume;
-        this.drive = function () {
-            console.log(`їдемо ${this.maxSpeed} кілометрів за годину`)
-        }
-        this.info = function () {
-            for (const key in this) {
-                if (typeof this[key] !== 'function') {
-                    console.log(`${key} - ${this[key]}`)
-                }
+    }
+
+    drive() {
+        console.log(`їдемо ${this.maxSpeed} кілометрів за годину`)
+    }
+
+    info() {
+        for (const key in this) {
+            if (typeof this[key] !== 'function') {
+                console.log(`${key} - ${this[key]}`)
             }
         }
-        this.increaseSpeed = function (newSpeed){
-            console.log(this.maxSpeed = this.maxSpeed + newSpeed);
-        }
-        this.changeYear = function (newYear){
-            this.year = newYear
-        }
-        this.addDriver = function (driverInfo){
-            console.log(this.driver = driverInfo)
-        }
     }
+
+    increaseSpeed(newSpeed) {
+        console.log(this.maxSpeed = this.maxSpeed + newSpeed);
+    }
+
+    changeYear(newYear) {
+        this.year = newYear
+    }
+
+    addDriver(driverInfo) {
+        console.log(this.driver = driverInfo)
+    }
+
 }
+
 let car2 = new CarCreator2('cls63', 'mersedes', 2025, 300, 6)
 car2.drive()
 car2.info()
 car2.increaseSpeed(50)
 car2.changeYear(3000)
-car2.addDriver(['Vasya','mersedes'])
+car2.addDriver(['Vasya', 'mersedes'])
 
 
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-function Popelyushka (pName, age, footSize){
+function Popelyushka(pName, age, footSize) {
     this.name = pName;
     this.age = age;
     this.foot = footSize;
 }
+
 let popelushkiArr = [
     new Popelyushka('Olya', 19, 35),
     new Popelyushka('Katya', 16, 34),
@@ -106,13 +114,13 @@ let popelushkiArr = [
 ];
 console.log(popelushkiArr)
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-let prince = {name: 'Bogdan', age:22, shose: 34}
+let prince = {name: 'Bogdan', age: 22, shose: 34}
 console.log(prince)
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 popelushkiArr.forEach(girl => {
-if(girl.foot === prince.shose){
-    console.log(`must be ${girl.name}`)
-}
+    if (girl.foot === prince.shose) {
+        console.log(`must be ${girl.name}`)
+    }
 })
 
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
