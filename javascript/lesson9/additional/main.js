@@ -271,3 +271,20 @@ for (let usersListElement of usersList) {
     }
 }
 
+// for (let arrayElement of usersList) {
+//
+//     function scrapper(object) {
+//         for (const argumentsKey in object) {
+//
+//             if (typeof object[argumentsKey] === 'object') {
+//                 console.log(`${argumentsKey} : `)
+//                 scrapper(object[argumentsKey])
+//             } else {
+//
+//                 console.log(`${argumentsKey} : ${object[argumentsKey]}`)
+//             }
+//         }
+//     }
+//
+//     scrapper(arrayElement)
+// }
