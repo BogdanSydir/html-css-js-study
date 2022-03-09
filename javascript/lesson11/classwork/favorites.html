@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>favorites</title>
+    <style>
+        .favorite{
+            height: max-content;
+            width: max-content;
+            background: blanchedalmond;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    let favorites = JSON.parse(localStorage.getItem('favorites'))
+
+    for (let favorite of favorites) {
+        let div = document.createElement('div')
+        div.classList.add('favorite')
+        div.innerHTML = `Name: ${favorite.name}, Age: ${favorite.age}, Status: ${favorite.status}`
+        document.body.append(div)
+    }
+</script>
+</body>
+</html>

@@ -37,6 +37,7 @@ btn2.onclick = function (e) {
 
     let car = {'model': model.value, 'type': type.value, 'volume': volume.value}
     let cars = JSON.parse(localStorage.getItem('cars')) || []
+    console.log(cars)
     cars.push(car)
     localStorage.setItem('cars', JSON.stringify(cars))
 }
