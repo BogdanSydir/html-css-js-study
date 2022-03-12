@@ -1,0 +1,13 @@
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 0.5%;
+}
+.post{
+    width: 19.5%;
+    background: silver;
+}
+.comment{
+    background: #8bd4d6;
+}
