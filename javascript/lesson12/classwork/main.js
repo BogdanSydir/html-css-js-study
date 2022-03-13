@@ -18,16 +18,19 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 e.preventDefault()
 
 
-                fetch(`https://jsonplaceholder.typicode.com/comments/${post.id}`)
+                fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                     .then(response => response.json())
                     .then(comments => {
                         console.log(comments)
+                        for (let comment of comments) {
+
                         let commentDiv = document.createElement('div')
                         commentDiv.classList.add('comment')
                         postDiv.appendChild(commentDiv)
-                        commentDiv.innerHTML = `<p>Name: ${comments.name} </br>
-                                                email: ${comments.email} </br>Body: ${comments.body}</p>`
+                        commentDiv.innerHTML = `<p>Name: ${comment.name} </br>
+                                                email: ${comment.email} </br>Body: ${comment.body}</p>`
 
+                        }
                     })
                 button.disabled = true
             }
