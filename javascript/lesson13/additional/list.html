@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .basket{
+        display: flex;
+        flex-wrap: wrap;
+        background: blanchedalmond;
+    }
+
+    .image{
+        max-height:100px;
+        max-width: 100px;
+    }
+</style>
+<body>
+
+<div>This is basket:
+    <div class="basket"></div>
+</div>
+
+<script>
+    let items = JSON.parse(localStorage.getItem('items'))
+    let basket = document.getElementsByClassName('basket')[0]
+
+
+    for (let item of items) {
+        let divItem = document.createElement('div')
+        divItem.innerHTML = `Name: ${item.Name} </br>Quantity: ${item.Quantity} </br>Price: ${item.Price} </br>
+                             <img src="${item.image}" alt="image" class="image"></br>`
+        basket.append(divItem)
+
+        let removeBtn = document.createElement('button')
+        removeBtn.innerText = 'remove this item'
+        divItem.appendChild(removeBtn)
+
+        removeBtn.onclick = function (e) {
+            e.preventDefault()
+            divItem.style.display = 'none'
+
+            let itemToDeleteIndex = items.indexOf(item)
+            items.splice(itemToDeleteIndex, 1)
+
+            console.log(items)
+            localStorage.setItem('items', JSON.stringify(items))
+        }
+    }
+    let clearBtn = document.createElement('button')
+    document.body.appendChild(clearBtn)
+    clearBtn.innerText = 'clear the basket'
+    clearBtn.onclick = function () {
+        localStorage.clear()
+        basket.style.display = 'none'
+    }
+
+</script>
+</body>
+</html>
