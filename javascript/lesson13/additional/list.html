@@ -33,7 +33,7 @@
     for (let item of items) {
         let divItem = document.createElement('div')
         divItem.innerHTML = `Name: ${item.Name} </br>Quantity: ${item.Quantity} </br>Price: ${item.Price} </br>
-                             <img src="${item.image}" alt="image" class="image"></br>`
+                             Id: ${item.id} </br><img src="${item.image}" alt="image" class="image"></br>`
         basket.append(divItem)
 
         let removeBtn = document.createElement('button')

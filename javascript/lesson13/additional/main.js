@@ -13,13 +13,15 @@ let button1 = document.getElementById('button1')
 
 // Зберігати товари в масив в локалсорадж. При збережені товару з форми,
 // action не повинно відбуватись (preventDefault)
+let count = 0
 
 button1.onclick = function (e) {
     e.preventDefault()
-
-    let item = {'Name': name.value, 'Quantity': quantity.value, 'Price': price.value, 'image': image.value}
-    console.log(item)
+    // count = count + 1
+    count++
+    let item = {'Name': name.value, 'Quantity': quantity.value, 'Price': price.value, 'image': image.value, 'id': count}
     let items = JSON.parse(localStorage.getItem('items')) || []
+    console.log(item)
     console.log(items)
     items.push(item)
     localStorage.setItem('items', JSON.stringify(items))
