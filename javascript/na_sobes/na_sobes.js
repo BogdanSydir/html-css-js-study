@@ -1,3 +1,46 @@
+// СЕМАНТИЧНА ВЕРСТКА - теги нижче HTML5:
+// <header> — представляє собою набір початкових даних і певної навігації. В ньому розміщують логотипи, заголовки, посилання на сайт, а інколи і меню навігації по сайту. Тобто цей елемент — це "шапка" вебсторінки.
+// <article> — відповідає статті, запису в замітці, новині. Все, що відноситься, наприклад, до вашої статті на сайті повинне бути включене в тег
+// <article>(тобто це і заголовок статті, дата, сам контент, а також коментарі). Щодо коментарів, то вони також окремі в <article>, але вкладені в основний.
+// <footer> — це нижня частина сайту, де зазвичай розміщують авторські права, додаткову інформацію, меню сайту та інше.
+// <nav> — виділяє панель навігації по сайту, меню. На сторінці може бути декілька таких елементів.
+// <section> — із його допомогою можна розділяти вебсторінку на певні тематичні розділи або розділити статтю на розділи. Як правило має власний заголовок.
+// <aside> — використовується для контенту, який повинен розміщуватись окремо від основного. Це може бути бокова панель, частина сторінки перед <footer> абощо.
+// В тезі можна розміщувати меню, рекламу та інший додатковий контент.
+
+// АДАПТИВНА ВЕРСТКА - окремі стилі для кожного розширення (@media)
+// РЕСПОНСІВ ВЕРСТКА - розміри блоків у відсотках
+
+// БЕМ - блок елемент модифікатор
+// блок - незалежний елемент, елемент - складова частина блоку, модифікатор - властивість блока або елемента
+//<div class="header">
+//     <div class="header__bottom">...</div>
+// </div>
+
+// div по центру:
+// display flex, justify content center, align items center
+// father position relative, son position absolute left 50% right 50% top 50% transform 50 translate -50
+
+// ІЄРАРХІЯ СЕЛЕКТОРІВ CSS:
+// tag: div                 - weight 1
+// class: .your_class       - weight 10
+// id: #your_id             - weight 100
+// при комбінації вага селекторів сумується, наприклад: div .your_class - weight 11
+
+// ПРЕПРОЦЕСОРИ CSS - програми які мають власний синтаксис і може генерувати з нього css код. Розширює можливості, покращує читання коду.
+
+// ФУНКЦІЯ debounce - функція яка використовується для оптимізації (наприклад коли вводимо дані в інпут, вона робить затримку між запитами на сервер)
+
+// deep copy i shallow copy:
+// const a = 1
+// const b = a   // б посилається на а (shallow) // Object.assign копіює не глибоко
+// const a = 1
+// const b = a.json().stringify().parse // копіює (deep copy)
+
+// ПОВЕДІНКА БРАУЗЕРА ПО ЗАМОВЧУВАННЮ:
+// при кліку на кнопку оновлюється сторінка, для запобігання викорис e.preventDefault
+// e.stopPropagation припиняє спливання (якщо кнопка в середині div, то івент діва не спрацює)
+
 console.log('_________ТИПИ ДАНИХ_________')
 
 console.log(typeof 'текст'); //string
@@ -7,7 +50,8 @@ console.log(typeof [1, 2, true, 'asda']); //object (масив це об'єкт)
 console.log(typeof {status: 'lol'}); //object)
 console.log(typeof NaN); // number)
 // NaN - коли йде обчислення, але одне не є числом
-// null - пуста заглушка
+// null - пуста мінна
+//undefined - неіснуюча змінна
 
 console.log(100 + '2') // string
 console.log(+'15') // number
@@ -89,7 +133,7 @@ console.log(someArr.sort()) // сортує по алфавіту someArr.sort((
 console.log(someArr.flat()) // виводить всі елементи на один рівень
 
 let numbers = [1, 2, 3, 4, 5, 6, 7]
-numbers.forEach((value) => console.log(value)) // виконує колбек для кожного елемента і змінює, нічого не повертає
+numbers.forEach((value) => console.log(value)) // виконує колбек для кожного елемента і змінює його, нічого не повертає
 
 console.log(numbers.filter((item, index) => item > 5)); // дозволяє відфільтрувати і повертає новий масив
 
@@ -221,13 +265,13 @@ document.querySelectorAll('div') // знаходить всі діви
 
 console.log('__________ФУНКЦІЇ__________')
 
-fn('function declaration')
+fn('function declaration') // є hoisting
 function fn(value) {
     console.log(value)
 }
 
 let fn1 = function () {
-    console.log(arguments[0]) //немає hoisting arguments - це псевдомасив який не можна сортувати, але можна взяти якийсь елемент чи проітерувати
+    console.log(arguments[0]) //немає hoisting, arguments - це псевдомасив який не можна сортувати, але можна взяти якийсь елемент чи проітерувати
 }
 fn1('function expression')
 
@@ -308,3 +352,25 @@ function timeoutCounter(counter, delay){
 }
 timeoutCounter(0, 1000)
     .then(counterValue => {return timeoutCounter(counterValue, 1000)})
+
+//promise race
+let promiseOne = new Promise((resolve) => {
+    setTimeout(()=>{resolve('promise 1')}, 2000)
+});
+let promiseTwo = new Promise((resolve, reject) => {
+    setTimeout(()=>{reject('promise 2')}, 3000)
+});
+let promiseThree = new Promise((resolve) => {
+    setTimeout(()=>{resolve('promise 2')}, 1000)
+});
+Promise.race([promiseOne, promiseTwo, promiseThree]) //приймає масив промісів і відає результат найшвидшого
+    .then(value => {console.log(value);})
+
+Promise.all([promiseOne, promiseTwo.catch(()=>{}), promiseThree]) //приймає масив і виводить масив всіх резолвів у порядку як у масиві, валиться при помилках
+    .then(value => {console.log(value);})
+
+Promise.allSettled([promiseOne, promiseTwo, promiseThree]) //приймає масив і виводить масив об'єктів всіх промісів з результатом виконання (fulfilled or rejected)
+    .then(value => {console.log(value);})
+
+
+
